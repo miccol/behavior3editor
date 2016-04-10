@@ -1,4 +1,4 @@
-<div ng-controller="PropertiespanelController as propertiespanel" class="full-height side-panel">
+<div ng-controller="PropertiespanelController as propertiespanel" class="full-height side-panel", onclick="javascript:hideAllResponses()">
 
   <div class="title">Properties</div>
 
@@ -32,6 +32,32 @@
 
         </textarea>
       </div>
+        <div class="form-group">
+        <label for="code" ng-show = "propertiespanel.block.display">Code</label>
+        <textarea name="code"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Code"
+                  ng-keydown="propertiespanel.keydown($event)"
+                  ng-model="propertiespanel.block.code"
+                  ng-change="propertiespanel.update()"
+                  ng-show = "propertiespanel.block.display">
+
+        </textarea>
+      </div>
+
+        <div class="form-group" ng-show = "propertiespanel.block.display">
+        <label for="code">Header</label>
+        <textarea name="header"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Header"
+                  ng-keydown="propertiespanel.keydown($event)"
+                  ng-model="propertiespanel.block.header"
+                  ng-change="propertiespanel.update()"
+                  ng-show = "propertiespanel.block.display">
+        </textarea>
+      </div>
 
       <div class="form-group">
         <b3-key-table heading="Properties" 
@@ -42,5 +68,4 @@
       </div>
     </form>
   </div>
-  
 </div>

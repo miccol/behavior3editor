@@ -17,6 +17,7 @@
     vm.block = null;
     vm.update = update;
     vm.keydown = keydown;
+    vm.display = false;
 
     _create();
     _activate();
@@ -30,9 +31,17 @@
 
       if (s.length === 1) {
         vm.original = s[0];
+        if (vm.original.category == 'action')
+        {
+           //vm.display = true;
+        }
         vm.block = {
           title       : vm.original.title,
           description : vm.original.description,
+          code        : vm.original.code,
+          header      : vm.original.header,
+          category    : vm.original.category,
+          display    : vm.original.category == 'action',
           properties  : tine.merge({}, vm.original.properties)
         };
       } else {
@@ -71,6 +80,7 @@
       var p = $window.editor.project.get();
       var t = p.trees.getSelected();
       t.blocks.update(vm.original, vm.block);
+
     }
   }
 })();

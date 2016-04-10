@@ -65,6 +65,8 @@ b3e.editor.ExportManager = function(editor) {
       id           : tree._id,
       title        : root.title,
       description  : root.description,
+      code         : root.code,
+      header       : root.header,
       root         : first[0] || null,
       properties   : root.properties,
       nodes        : {},
@@ -88,6 +90,8 @@ b3e.editor.ExportManager = function(editor) {
           name        : block.name,
           title       : block.title,
           description : block.description,
+          code        : block.code,
+          header      : block.header,
           properties  : block.properties,
           display     : {x:block.x, y:block.y}
         };
@@ -120,6 +124,8 @@ b3e.editor.ExportManager = function(editor) {
           category    : node.category,
           title       : node.title,
           description : node.description,
+          code        : node.code,
+          header      : node.header,
           properties  : node.properties,
         });
       }

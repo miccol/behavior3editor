@@ -15,6 +15,8 @@
     this.title = null;
     this.category = null;
     this.description = null;
+    this.code = null;
+    this.header = null;
     this.properties = {};
     this.isDefault = !!isDefault;
 
@@ -32,6 +34,8 @@
       n.category    = this.category;
       n.description = this.description;
       n.properties  = this.properties;
+      n.code        = this.code;
+      n.header      = this.header;
       
       return n;
     };

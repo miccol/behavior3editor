@@ -20,6 +20,8 @@
     this.title       = dict.title || this.name;
     this.category    = dict.category;
     this.description = dict.description || '';
+    this.code = dict.code || '';
+    this.header = dict.header || '';
     this.properties  = tine.merge({}, dict.properties);
 
     this._settings = null;
@@ -89,6 +91,8 @@
     block.category    = this.category;
     block.title       = this.title;
     block.description = this.description;
+    block.code        = this.code;
+    block.header      = this.header;
     block.properties  = tine.merge({}, this.properties);
     
     block._applySettings(this._settings);

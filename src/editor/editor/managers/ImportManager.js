@@ -32,6 +32,8 @@ b3e.editor.ImportManager = function(editor) {
 
     root.title       = data.title;
     root.description = data.description;
+    root.code        = data.custom_nodes;
+    root.header      = data.header;
     root.properties  = data.properties;
     root.x           = display.x || 0;
     root.y           = display.y || 0;
@@ -51,6 +53,8 @@ b3e.editor.ImportManager = function(editor) {
       block.id = spec.id;
       block.title = spec.title;
       block.description = spec.description;
+      block.code = spec.code;
+      block.header = spec.header;
       block.properties = tine.merge({}, block.properties, spec.properties);
       block._redraw();
       
