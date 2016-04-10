@@ -55,6 +55,7 @@ b3e.editor.ImportManager = function(editor) {
       block.description = spec.description;
       block.code = spec.code;
       block.header = spec.header;
+      block.language = spec.language;
       block.properties = tine.merge({}, block.properties, spec.properties);
       block._redraw();
       

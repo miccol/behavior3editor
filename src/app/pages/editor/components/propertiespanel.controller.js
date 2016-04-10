@@ -17,7 +17,8 @@
     vm.block = null;
     vm.update = update;
     vm.keydown = keydown;
-    vm.display = false;
+    vm.displayCode = false;
+    vm.displayHeader = false;
 
     _create();
     _activate();
@@ -36,12 +37,13 @@
            //vm.display = true;
         }
         vm.block = {
-          title       : vm.original.title,
+          name       : vm.original.name,
           description : vm.original.description,
           code        : vm.original.code,
           header      : vm.original.header,
           category    : vm.original.category,
-          display    : vm.original.category == 'action',
+          displayCode : vm.original.category == 'action',
+          displayHeader : vm.original.language == 'c++',
           properties  : tine.merge({}, vm.original.properties)
         };
       } else {

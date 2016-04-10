@@ -20,6 +20,7 @@ b3e.tree.EditManager = function(editor, project, tree) {
       cp.description = block.description;
       cp.code = block.code;
       cp.header = block.header;
+      cp.language = block.language;
       cp.properties = block.properties;
       cp._settings = block._settings;
       cp.x = block.x;

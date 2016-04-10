@@ -17,6 +17,7 @@
     this.description = null;
     this.code = null;
     this.header = null;
+    this.language = null;
     this.properties = {};
     this.isDefault = !!isDefault;
 
@@ -35,6 +36,7 @@
       n.description = this.description;
       n.properties  = this.properties;
       n.code        = this.code;
+      n.language    = this.language;
       n.header      = this.header;
       
       return n;

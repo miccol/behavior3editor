@@ -92,6 +92,7 @@ b3e.editor.ExportManager = function(editor) {
           description : block.description,
           code        : block.code,
           header      : block.header,
+          language    : block.language,
           properties  : block.properties,
           display     : {x:block.x, y:block.y}
         };
@@ -126,6 +127,7 @@ b3e.editor.ExportManager = function(editor) {
           description : node.description,
           code        : node.code,
           header      : node.header,
+          language    : node.language,
           properties  : node.properties,
         });
       }

@@ -104,6 +104,7 @@ b3e.tree.BlockManager = function(editor, project, tree) {
       description : block.description,
       code        : block.code,
       header      : block.header,
+      langauge    : block.language,
       properties  : block.properties,
     };
 
@@ -134,6 +135,11 @@ b3e.tree.BlockManager = function(editor, project, tree) {
     } else {
       block.header = node.header || block.header;
     }
+    if (typeof template.language !== 'undefined') {
+      block.language = template.language;
+    } else {
+      block.language = node.language || block.language;
+    }
     if (typeof template.properties !== 'undefined') {
       block.properties = tine.merge({}, node.properties, template.properties);
     } else {
@@ -146,6 +152,8 @@ b3e.tree.BlockManager = function(editor, project, tree) {
       title       : block.title,
       description : block.description,
       code        : block.code,
+      header      : block.header,
+      language    : block.language,
       properties  : block.properties,
     };
 

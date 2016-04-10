@@ -23,6 +23,7 @@ b3e.project.NodeManager = function(editor, project) {
       n.description = node.description;
       n.code        = node.code;
       n.header      = node.header;
+      n.language    = node.language;
       n.properties  = tine.merge({}, node.properties||node.parameters);
 
       node = n;
@@ -64,6 +65,7 @@ b3e.project.NodeManager = function(editor, project) {
       description : node.description,
       code        : node.code,
       header      : node.header,
+      language    : node.language,
       category    : node.category,
       properties  : node.properties,
     };
@@ -86,6 +88,9 @@ b3e.project.NodeManager = function(editor, project) {
     if (typeof template.header !== 'undefined') {
       node.header = template.header;
     }
+    if (typeof template.language !== 'undefined') {
+      node.language = template.language;
+    }
     if (typeof template.properties !== 'undefined') {
       node.properties  = tine.merge({}, template.properties);
     }
@@ -95,6 +100,8 @@ b3e.project.NodeManager = function(editor, project) {
       title       : node.title,
       description : node.description,
       code        : node.code,
+      header      : node.header,
+      language    : node.language,
       category    : node.category,
       properties  : node.properties,
     };

@@ -28,6 +28,7 @@
     this.nodes.add(b3e.Root, true);
     this.nodes.add(b3.Sequence, true);
     this.nodes.add(b3.Priority, true);
+    /*
     this.nodes.add(b3.MemSequence, true);
     this.nodes.add(b3.MemPriority, true);
     this.nodes.add(b3.Repeater, true);
@@ -40,8 +41,9 @@
     this.nodes.add(b3.Succeeder, true);
     this.nodes.add(b3.Runner, true);
     this.nodes.add(b3.Error, true);
-    this.nodes.add(b3.Wait, true);
 
+    this.nodes.add(b3.Wait, true);
+    */
     this._applySettings(this._editor._settings);
     this.history.clear();
     this._editor.clearDirty();

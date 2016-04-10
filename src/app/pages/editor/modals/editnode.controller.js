@@ -27,6 +27,7 @@
     vm.original = null;
     vm.save = save;
     vm.remove = remove;
+    vm.showHeader = showHeader;
 
     _active();
 
@@ -38,10 +39,17 @@
         vm.node = node.copy();
         vm.original = node;
         vm.action = 'Update';
+
+
+
       } else {
         vm.node = new b3e.Node();
-        vm.node.category = 'composite';
-      }
+        vm.node.category = 'action';
+        vm.node.language = 'python';
+        document.getElementById('head').style.visibility = "hidden";
+        document.getElementById('codetext').className = "form-group col-md-12";
+
+              }
 
       var blacklist = [];
       p.nodes.each(function(node) {
@@ -50,6 +58,24 @@
         }
       });
       vm.blacklist = blacklist.join(',');
+    }
+
+
+    function showHeader() {
+
+    var selector = document.getElementById('lang');
+    var value = selector[selector.selectedIndex].value;
+
+        if (value == 'c++')
+        {
+        document.getElementById('head').style.visibility = "visible";
+        document.getElementById('codetext').className = "form-group col-md-6";
+
+        }
+        else{
+        document.getElementById('head').style.visibility = "hidden";
+        document.getElementById('codetext').className = "form-group col-md-12";
+        }
     }
 
     function save() {

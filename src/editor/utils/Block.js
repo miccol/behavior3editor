@@ -22,6 +22,7 @@
     this.description = dict.description || '';
     this.code = dict.code || '';
     this.header = dict.header || '';
+    this.language = dict.language || '';
     this.properties  = tine.merge({}, dict.properties);
 
     this._settings = null;
@@ -93,6 +94,7 @@
     block.description = this.description;
     block.code        = this.code;
     block.header      = this.header;
+    blokc.language    = this.language;
     block.properties  = tine.merge({}, this.properties);
     
     block._applySettings(this._settings);

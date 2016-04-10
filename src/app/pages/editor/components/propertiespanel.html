@@ -10,13 +10,13 @@
   <div ng-show="propertiespanel.block" class="properties">
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="name">Name</label>
         <input type="text" 
                class="form-control"
-               name="title"
-               placeholder="Title"
+               name="name"
+               placeholder="Name"
                ng-keydown="propertiespanel.keydown($event)"
-               ng-model="propertiespanel.block.title"
+               ng-model="propertiespanel.block.name"
                ng-change="propertiespanel.update()">
       </div>
 
@@ -33,7 +33,7 @@
         </textarea>
       </div>
         <div class="form-group">
-        <label for="code" ng-show = "propertiespanel.block.display">Code</label>
+        <label for="code" ng-show = "propertiespanel.block.displayCode">Code</label>
         <textarea name="code"
                   rows="4"
                   class="form-control"
@@ -41,12 +41,12 @@
                   ng-keydown="propertiespanel.keydown($event)"
                   ng-model="propertiespanel.block.code"
                   ng-change="propertiespanel.update()"
-                  ng-show = "propertiespanel.block.display">
+                  ng-show = "propertiespanel.block.displayCode">
 
         </textarea>
       </div>
 
-        <div class="form-group" ng-show = "propertiespanel.block.display">
+        <div class="form-group" ng-show = "propertiespanel.block.displayHeader">
         <label for="code">Header</label>
         <textarea name="header"
                   rows="4"
@@ -55,16 +55,17 @@
                   ng-keydown="propertiespanel.keydown($event)"
                   ng-model="propertiespanel.block.header"
                   ng-change="propertiespanel.update()"
-                  ng-show = "propertiespanel.block.display">
+                  ng-show = "propertiespanel.block.displayHeader">
         </textarea>
       </div>
-
+<!--
       <div class="form-group">
         <b3-key-table heading="Properties" 
                       ng-model="propertiespanel.block.properties"
                       ng-change="propertiespanel.update()"
                       class="no-border">
         </b3-key-table>
+      -->
       </div>
     </form>
   </div>
